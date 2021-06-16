@@ -215,22 +215,22 @@ resources:
   - name: myRepo
     type: GITRepo
     configuration:
-      path: deepikasl/jfrog_pipelines
-      gitProvider: deepikaGithub
+      path: RjSH1/jfrog_pipelines
+      gitProvider: myGithub
       branches:
         include: ^{{gitBranch}}$
   - name: newRepo
     type: GitRepo
     configuration:
-      path: deepikasl/jfrog_pipelines
-      gitProvider: deepikaGithub
+      path: RjSH1/jfrog_pipelines
+      gitProvider: myGithub
       branches:
         include: ^{{gitBranch}}$
   - name: script_1
     type: GitRepo
     configuration:
-      path: deepikasl/sample-script
-      gitProvider: deepikaGithub
+      path: RjSH1/sample-script
+      gitProvider: myGithub
       branches:
         include: ^{{gitBranch}}$
       files:
@@ -238,8 +238,8 @@ resources:
   - name: script_2
     type: GitRepo
     configuration:
-      path: deepikasl/sample-script
-      gitProvider: deepikaGithub
+      path: RjSH1/sample-script
+      gitProvider: myGithub
       branches:
         include: ^{{gitBranch}}$
       files:
