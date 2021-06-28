@@ -26,7 +26,7 @@ pipelines:
                 - failure
           jenkinsJobName: testPipeline
           integrations:
-            - name: myJenkins
+            - name: MyJenkins
       
   - name: simple_jenkins_demo
     steps:
@@ -37,7 +37,7 @@ pipelines:
             - name: script_gh
           jenkinsJobName: testPipeline
           integrations:
-            - name: myJenkins
+            - name: MyJenkins
       
       - name: step_A
         type: Bash
