@@ -2,8 +2,8 @@ resources:
   - name: script_gh
     type: GitRepo
     configuration:
-      path: deepikasl/sample-script
-      gitProvider: deepikaGithub
+      path: RjSH1/sample-script
+      gitProvider: myGithub
       branches:
         include: ^{{gitBranch}}$
 
@@ -26,7 +26,7 @@ pipelines:
                 - failure
           jenkinsJobName: testPipeline
           integrations:
-            - name: deepikaJenkins
+            - name: myJenkins
       
   - name: simple_jenkins_demo
     steps:
@@ -37,7 +37,7 @@ pipelines:
             - name: script_gh
           jenkinsJobName: testPipeline
           integrations:
-            - name: deepikaJenkins
+            - name: myJenkins
       
       - name: step_A
         type: Bash
@@ -49,7 +49,8 @@ pipelines:
         execution:
           onExecute:
             - echo "Executing step_A"
-            - printenv
+            - if [ $step_jenkins_statusName == "failure" ]; then  echo "Do something"; fi
+            - if [ $step_jenkins_statusName == "error" ]; then  echo "Do something else"; fi
      
       - name: simple_conditional_B
         type: Bash
@@ -63,4 +64,3 @@ pipelines:
           onExecute:
             - echo "Executing simple_conditional_B"
             - printenv
-            
