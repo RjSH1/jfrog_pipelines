@@ -2,8 +2,8 @@ resources:
   - name: script
     type: GitRepo
     configuration:
-      path: deepikasl/sample-script
-      gitProvider: deepikaGithub
+      path: RjSH1/sample-script
+      gitProvider: myGithub
 pipelines:
   - name: test_stepTestReports
     steps:
